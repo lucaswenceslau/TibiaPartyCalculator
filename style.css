@@ -1,0 +1,137 @@
+
+.calculadora{
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    border: solid black 5px;
+    color: white;
+    background: white url("img/2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;         
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    }
+
+    .form{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+       text-align: center;
+    }
+    form{
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        margin: 0 auto;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        justify-content: space-around;
+        border: black 1px solid;
+        
+    }
+    form input{
+        border-radius: 10px;
+        text-align: center;
+
+    }
+    form input:focus{
+        outline: none;
+        border: 2px solid red
+    }
+    form input:visited{
+        border: none;
+    }
+    .opacidade{
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+#huntopt{
+    width: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.imbmg{
+    height: 30px;
+    width: 30px;
+    
+    
+}
+.imb{
+    width: 10%;
+}
+.botao{
+
+    margin: 0 auto;
+    margin-top: 10px;
+    color: yellow;
+    background: blue;
+    border-radius: 10%;
+    border: solid yellow 2px;
+    height: 50px; width: 100px;
+    cursor: pointer;
+}
+.botao:active{
+    position: static;
+    background: yellow;
+    border: solid 2px blue;
+    color: blue;
+}
+.botao:after{
+    border: none;
+}.tc{
+    border-radius: 10px;
+    width: 10%;
+    text-align: center;
+}
+.recebe{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-content:center ;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.recebe input{
+    border-radius: 10px;
+    text-align: center;
+}
+.esconder{
+display: none;
+}
+p{
+    margin: 10px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    text-align: center;
+
+}
+p img{
+    width: 30px;
+}
+#formulario img{
+    width: 30px;
+}
+.loot{
+    margin: 0 auto;
+}
+.shield{
+    width: 15px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+

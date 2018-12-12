@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculadora Tibia</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <style></style>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="form">
+            <form id="formulario" method="get">
+              <p>  Tipo de hunt:</p> <select id="huntopt" name="huntopt" onchange="optHunt()">
+                    <option value="0">2X</option>
+                    <option value="1">3X</option>
+                    <option value="2" selected>4X</option>
+                </select>
+                <div id="tc"><p><img src="img/tibia_coin.gif" alt=""> TC Price</p><input type="number" name="" id="" placeholder="Ex: 12.500"> </div>
+                <div id="j1"><p><img src="img/knight.gif" alt=""> Waste Knight: </p> <input id="p1" type="number" name="gastohunt" placeholder="Ex: 100.000"></div>
+                <div id="j2"><p><img src="img/druid.gif" alt=""> Waste Druid:</p><input id="p2" type="number" name="gastohunt" placeholder="Ex: 150.000"></div>
+                <div id="j3"><p><img src="img/sorcerer.gif" alt=""> Waste Sorcerer:</p><input id="p3" type="number" name="gastohunt" placeholder="Ex: 120.000"></div>
+                <div id="j4"><p><img src="img/paladin.gif" alt=""> Waste Paladin:</p><input id="p4" type="number" name="gastohunt" placeholder="Ex: 80.000"></div>
+                
+              <div class="loot"> <p><img src="img/loot.gif" alt=""> Hunt Loot: <input id="loot" type="number" name="loot" placeholder="Ex: 100.000"></p></div>
+                
+            </form>
+            <div id="recebe" class="recebe esconder">
+              <div><p><img src="img/loot.gif" alt=""> Hunt Loot:</p><input type="text" name="" id="recebeLoot" disabled></div>
+            
+              <div ><p><img src="img/party_waste.gif" class="shield" alt=""> Party Waste:</p><input type="text" name="" id="wasteTotal" disabled></div>
+            
+              <div class="recebe-form"><p><img src="img/party.gif" class="shield" alt=""> Party Profit:</p>
+                <input type="text" name="" id="profitWaste" disabled></div>
+            
+              <div class="recebe-form"><p><img src="img/Party_Member.gif" class="shield" alt=""> Profit Each:</p><input type="text" name="" id="profitEach" disabled>
+            </div>
+            
+               <div class="recebe-form"><p><img src="img/knight.gif" alt=""> Pay to Knight:</p><input type="text" name="" id="p1recebe" disabled>
+                TC:<input type="number" name="" id="" class="tc"></div>
+            
+                <div class="recebe-form"><p><img src="img/druid.gif" alt=""> Pay to Druid:</p><input type="text" name="" id="p2recebe" disabled>
+                    TC:<input type="number" name="" id="" class="tc"></div>
+            
+               <div id="recebe-form3"><p><img src="img/sorcerer.gif" alt=""> Pay to Sorcerer: </p><input type="text" name="" id="p3recebe" disabled>
+                TC:<input type="number" name="" id="" class="tc"></div>
+            
+                <div id="recebe-form4"><p><img src="img/paladin.gif" alt=""> Pay to Paladin: </p><input type="text" name="" id="p4recebe" disabled>
+                    TC:<input type="number" name="" id="" class="tc"></div>
+            
+        </div>
+           
+  
+            
+            <button id="submit" value="Calcular" class="botao" onclick="calculaGastos()" >Calculate</button>
+            <button id="reset" value="reset" class="botao esconder" onclick="resetaCalc()">Reset</button>
+        </div>
+    </div>
+
+
+
+
+
+
+<script src="js/calcula.js"></script>
+<script src="js/resetaCalc.js"></script>
+<script src="js/huntOpt.js"></script>
+</body>
+</html>
+
+<!-- <div class="opacidade">
+    <fieldset>  
+        <Legend>Imbuiments gastos por hora</Legend>
+    Incluir Imbuiments:<br> Sim <input type="radio" name="imbui" value="simbui" id="" disabled> 
+                            Não <input type="radio" name="imbui" value="nimbui" id="" checked>
+    <br>    
+    Horas de hunt: <input type="number" name="hrshunt" id="horasHunt" max="24" min="1" disabled>
+    <br><br>
+
+     
+    <select name="imbuiments" id="" disabled>
+            <option value="crit">Critical</option>
+            <option value="mana">Mana Leech</option>
+            <option value="life">Life Leech</option>
+        </select>
+        <select name="nivel" id="nivel">
+                <option value="1">Nivel 3</option>
+                <option value="2">Nivel 2</option>                        
+                <option value="3">Nivel 1</option>                                       
+        </select>
+       <img src="img/Protective_Charm.gif" class="imbmg" alt=""><input type="number"class="imb" name="item1" id="protectiveCharm"  size="4" >
+       <img src="img/Sabretooth.gif" class="imbmg" alt=""><input type="number" class="imb"name="item1" id=""  size="4" >
+       <img src="img/Vexclaw_Talon.gif" class="imbmg" alt=""><input type="number" class="imb"name="item1" id=""  size="4" >
+            <br>
+         
+        <select name="imbuiments" id="" disabled>
+                <option value="mana" >Mana Leech</option>
+                <option value="crit">Critical</option>                            
+                <option value="life">Life Leech</option>
+        </select>
+        
+        <select name="nivel2" id="" disabled>
+                <option value="nv1">Nivel 3</option>
+                <option value="nv2">Nivel 2</option>                        
+                <option value="nv3">Nivel 1</option>                                       
+        </select>
+        <img src="img/Rope_Belt.gif" class="imbmg" alt=""><input type="number"class="imb" name="item1" id=""  size="4" >
+       <img src="img/Silencer_Claws.gif" class="imbmg" alt=""><input type="number" class="imb"name="item1" id=""  size="4" >
+       <img src="img/Some_Grimeleech_Wings.gif" class="imbmg" alt=""><input type="number" class="imb"name="item1" id=""  size="4" >
+        <br>
+        <select name="imbuiments" id="" disabled> 
+                <option value="life">Life Leech</option>
+                <option value="crit">Critical</option>
+                <option value="mana">Mana Leech</option>
+                
+        </select>
+        <select name="nivel3" id="" disabled>
+                    <option value="nv1">Nivel 3</option>
+                    <option value="nv2">Nivel 2</option>                        
+                    <option value="nv3">Nivel 1</option>                                       
+        </select>
+        <img src="img/Vampire_Teeth.gif" class="imbmg" alt=""><input type="number"class="imb" name="item1" id=""  size="4" >
+       <img src="img/Bloody_Pincers.gif" class="imbmg" alt=""><input type="number" class="imb"name="item1" id=""  size="4" >
+       <img src="img/Piece_of_Dead_Brain.gif" class="imbmg" alt=""><input type="number" class="imb"name="item1" id=""  size="4" >
+    </fieldset> <br></div>  -->
